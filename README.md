@@ -50,6 +50,12 @@ skillnova-intern-management/
 │   ├── .env.example           # Secure template for setting up credentials
 │   └── requirements.txt       # Python backend dependencies
 │
+├── assets/                    # Screenshots for documentation
+│   ├── portal_selection.png   # Frontend portal selection screen
+│   ├── swagger_register.png   # Swagger — POST /api/auth/register live response
+│   └── swagger_profile.png    # Swagger — GET /api/profile/ authenticated response
+│
+├── SkillNova_Project_Completion_Report.pdf
 └── README.md
 ```
 
@@ -190,14 +196,25 @@ To confirm full connectivity, open `http://localhost:5173`, launch **DevTools** 
 
 | Method | Endpoint | Description |
 |--------|----------|-------------|
-| POST | `/api/auth/signup` | Register a new user |
+| POST | `/api/auth/register` | Register a new user and receive a JWT token |
 | POST | `/api/auth/login` | Login and receive a JWT token |
+| GET | `/api/profile/` | Fetch the authenticated user's profile |
 | GET | `/api/interns/` | Fetch all intern profiles |
 | POST | `/api/interns/` | Add a new intern |
 | PUT | `/api/interns/{id}` | Update an intern profile |
 | DELETE | `/api/interns/{id}` | Delete an intern profile |
 
 Full interactive documentation available at `http://127.0.0.1:8000/docs` when the backend is running.
+
+---
+
+## 🖼️ Screenshots
+
+### Frontend — Role-Based Portal Selection
+![Portal Selection](assets/login_portal.png)
+
+| Email | `john@example.com` |
+| Password | `strongpassword123` |
 
 ---
 
@@ -211,8 +228,12 @@ Full interactive documentation available at `http://127.0.0.1:8000/docs` when th
 
 ---
 
+## 📄 Project Report
+
+A project completion report including feature documentation, and implementation screenshots is available in [`SkillNova_Project_Completion_Report.pdf`](./SkillNova_Project_Completion_Report.pdf).
+
+---
+
 ## 🤝 Contributing
 
 This project was built as part of an internship at **UptoSkills**. Contributions and suggestions are welcome — feel free to open an issue or submit a pull request.
-
-
